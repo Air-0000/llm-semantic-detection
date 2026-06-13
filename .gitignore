@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
