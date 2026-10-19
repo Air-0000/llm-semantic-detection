@@ -1,0 +1,30 @@
+# Configuration for Lightweight LLM Semantic Detection & Segmentation Pipeline
+
+device: "cuda"  # "cuda" or "cpu"
+
+llm:
+  model_name_or_path: "Qwen/Qwen2.5-0.5B-Instruct"
+  fallback_model: "rule_based"
+  max_new_tokens: 64
+  temperature: 0.3
+  enable_cache: true
+  cache_file: "cache/semantic_cache.json"
+
+vision_backbone:
+  type: "clip_or_dino"  # Supports dynamic visual feature extraction
+  image_size: [640, 640]
+  embed_dim: 512
+
+lora:
+  enabled: true
+  asymmetric: true
+  shallow_rank: 4     # Low rank for early visual/textual layers
+  deep_rank: 16       # High rank for late cross-modal fusion layers
+  lora_alpha: 32
+  lora_dropout: 0.05
+
+postprocessor:
+  default_score_thresh: 0.25
+  adaptive_thresh_enabled: true
+  nms_iou_thresh: 0.45
+  mask_binary_thresh: 0.5

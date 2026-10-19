@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-19 13:39:08",
+  "raw_mean_score": 0.5599981391181549,
+  "enhanced_mean_score": 0.5362910999327289,
+  "confidence_gain_pct": -4.23,
+  "cold_cache_ms": 0.68,
+  "warm_cache_ms": 0.0038,
+  "cache_speedup": 178.1,
+  "lora_params": {
+    "total_params": 546816,
+    "trainable_lora_params": 21504,
+    "ratio_pct": 3.93
+  },
+  "timings_ms": {
+    "llm_enhancement": 0.49,
+    "detector_inference": 55.53,
+    "post_processing": 40.39,
+    "total_latency": 96.41
+  },
+  "fps": 10.4
+}
