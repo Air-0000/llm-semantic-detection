@@ -14,3 +14,4 @@ venv/
 .DS_Store
 .DS_Store?
 ._*
+cache/
